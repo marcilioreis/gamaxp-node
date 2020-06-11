@@ -4,9 +4,18 @@
   "description": "docker run \\\r  --name postgres \\\r  -e POSTGRES_USER=marcilioreis \\\r  -e POSTGRES_PASSWORD=62724546 \\\r  -e POSTGRES_DB=heroes \\\r  -p 5432:5432 \\\r  -d \\\r  postgres",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha src/tests/*.js",
+    "test:watch": "mocha src/tests/*.js -w"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "pg": "^8.2.1",
+    "pg-hstore": "^2.3.3",
+    "sequelize": "^5.21.12"
+  },
+  "devDependencies": {
+    "mocha": "^8.0.1"
+  }
 }

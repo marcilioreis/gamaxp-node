@@ -21,7 +21,7 @@ class ICrud {
     throw new NotImplemenetedException();
   }
 
-  isConnected(id) {
+  isConnected() {
     throw new NotImplemenetedException();
   }
 }

@@ -1,0 +1,25 @@
+DROP TABLE IF EXISTS TB_HEROIS;
+CREATE TABLE TB_HEROIS (
+     ID INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY    NOT NULL,
+     NOME  TEXT    NOT NULL,
+     PODER TEXT    NOT NULL
+);
+
+-- create
+INSERT INTO TB_HEROIS(NOME, PODER)
+VALUES
+    ('Wonder Woman', 'Goddess'),
+    ('Huntress', 'Martial Artist'),
+    ('Raven', 'Sorcery')
+
+-- read
+SELECT * FROM TB_HEROIS;
+SELECT NOME FROM TB_HEROIS WHERE NOME = 'Raven';
+
+-- update
+UPDATE TB_HEROIS
+SET NOME = 'Zatanna', PODER = 'Magic'
+WHERE ID = 2;
+
+-- delete
+DELETE FROM TB_HEROIS WHERE ID = 3;

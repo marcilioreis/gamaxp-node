@@ -11,7 +11,7 @@ describe('Suite de testes da API Heroes', function () {
     app = await api;
   });
 
-  it.only('API Read', async () => {
+  it('API Read', async () => {
     const result = await app.inject({
       method: 'GET',
       url: '/heroes',
